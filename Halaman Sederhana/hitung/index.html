@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Perhitungan Volume</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="alert alert-primary text-center mt-4 text-uppercase fw-bold">Perhitungan Volume</h1>
+        <form>
+            <!-- MENGHITUNG VOLUME BALOK -->
+            <h2 class="alert mt-1 w-50 p-3 alert-primary text-uppercase">Volume Balok</h2>
+            <div class="input-group input-group-sm mb-2">
+                <!-- Panjang -->
+                <label class="input-group-text text-uppercase alert-dark" for="panjang">Panjang</label>
+                <input type="number" class="form-control" id="panjang" required>
+                <!-- Lebar -->
+                <label class="input-group-text text-uppercase alert-dark" for="lebar">Lebar</label>
+                <input type="number" class="form-control" id="lebar" required>
+                <!-- Tinggi -->
+                <label class="input-group-text text-uppercase alert-dark" for="tinggi">Tinggi</label>
+                <input type="number" class="form-control" id="tinggi" required>
+                <!-- Button -->
+                <button onclick="hitungVolumeBalok()" class="btn btn-success">Jumlahkan</button>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="alert alert-info fw-semibold">Hasil Penjumlahan dari :</span>
+                <p id="hasilBalok" class="alert alert-info fw-semibold"></p>
+            </div>
+
+            <!-- MENGHITUNG VOLUME KUBUS -->
+            <h2 class="alert mt-1 w-50 p-3 alert-primary text-uppercase">Volume Kubus</h2>
+            <div class="input-group input-group-sm mb-2">
+                <label for="sisi" class="input-group-text text-uppercase alert-dark">Sisi</label>
+                <input type="number" id="sisi" class="form-control" required>
+                <button onclick="hitungVolumeKubus()" class="btn btn-success">Jumlahkan</button>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="alert alert-info fw-semibold">Hasil Penjumlahan dari :</span>
+                <p id="hasilKubus" class="alert alert-info fw-semibold"></p>
+            </div>
+            
+            <!-- MENGHITUNG VOLUME PRISMA SEGITIGA -->
+            <h2 class="alert mt-1 w-50 p-3 alert-primary text-uppercase">Volume Prisma Segitiga</h2>
+            <div class="input-group input-group-sm mb-2">
+                <label for="alas" class="input-group-text text-uppercase alert-dark">Alas</label>
+                <input type="number" class="form-control" id="alas" required>
+                <label for="tinggiSegitiga" class="input-group-text text-uppercase alert-dark">Tinggi Segitiga</label>
+                <input type="number" class="form-control" id="tinggiSegitiga" required>
+                <label for="tinggiPrisma" class="input-group-text text-uppercase alert-dark">Tinggi Prisma</label>
+                <input type="number" class="form-control" id="tinggiPrisma" required>
+                <button onclick="hitungVolumePrisma()" class="btn btn-success">Jumlahkan</button>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="alert alert-info fw-semibold">Hasil Penjumlahan dari :</span>
+                <p id="hasilPrisma" class="alert alert-info fw-semibold"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
